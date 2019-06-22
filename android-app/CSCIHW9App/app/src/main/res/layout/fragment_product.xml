@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/productProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:indeterminateTint="@color/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/productProgressBarMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="Getting Details..." />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_gravity="center_vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/id_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/product_contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="100dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="410dp"
+            android:maxLines="3"
+            android:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewTexttViewTextViewTextViewText"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/priceWithShipping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productName"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="TextView" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/priceWithShipping"
+            android:background="?android:attr/listDivider"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/highlights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:drawableLeft="@drawable/highlights"
+            android:drawablePadding="5dp"
+            android:paddingTop="10dp"
+            android:text="Highlights"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:id="@+id/highlightsTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/highlights"
+            android:paddingBottom="10dp">
+
+            <TableRow android:id="@+id/subtitleRow">
+
+                <TextView
+                    android:id="@+id/subtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Subtitle"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtitleValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:paddingTop="10dp"
+                    android:paddingRight="90dp"
+                    android:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewTexttViewTextViewTextViewText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/priceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Price"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/priceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow android:id="@+id/brandRow">
+
+                <TextView
+                    android:id="@+id/brandText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Brand"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/brandValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="TextView" />
+            </TableRow>
+        </TableLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/highlightsTable"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/specifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider2"
+            android:drawableLeft="@drawable/specifications"
+            android:drawablePadding="5dp"
+            android:paddingTop="10dp"
+            android:text="Specifications"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/specificationValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/specifications"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="70dp"
+            android:paddingLeft="30dp"
+            android:text="TextView" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+</ScrollView>
